@@ -1,32 +1,40 @@
+/* Base Reset */
 * {
-  padding: 0;
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Setup */
 body {
   background-color: antiquewhite;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Container - now using semantic <main> and responsive sizing */
 .container {
-  width: 50%;
+  width: 90%;
+  max-width: 500px;
   text-align: center;
+  margin: auto;
 }
 
+/* Circle - responsive size with a max for larger screens */
 .circle {
-  width: 300px;
-  height: 300px;
+  width: 70vw;
+  height: 70vw;
+  max-width: 300px;
+  max-height: 300px;
   background-color: brown;
   border-radius: 50%;
   margin: 1rem auto;
-  transition: 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
+/* Icon Areas */
 .home,
 .contact {
   height: 50%;
@@ -37,8 +45,9 @@ body {
   align-items: center;
 }
 
+/* Buttons Styling */
 .buttons {
-  margin: 2rem;
+  margin: 2rem auto;
 }
 
 .btn {
@@ -46,11 +55,25 @@ body {
   background-color: brown;
   cursor: pointer;
   color: antiquewhite;
-  padding: 1rem 4rem;
+  padding: 1rem 2.5rem; /* Wider buttons with increased horizontal padding */
   border: none;
-  border-radius: 6px;
+  margin: 0 0.5rem;
+  border-radius: 10px; /* Added border radius for a nicer, rounded look */
 }
 
 .btn:active {
   transform: scale(0.98);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .home,
+  .contact {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.8rem 2rem; /* Adjust mobile padding to maintain proportion */
+    font-size: 1.2rem;
+  }
 }
