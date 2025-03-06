@@ -1,3 +1,10 @@
+:root {
+  /* Color Variables */
+  --page-bg: antiquewhite; /* Background color of the page */
+  --primary-color: brown; /* Primary color for circle and buttons */
+  --text-color: antiquewhite; /* Text and icon color */
+}
+
 /* Base Reset */
 * {
   margin: 0;
@@ -7,7 +14,7 @@
 
 /* Body Setup */
 body {
-  background-color: antiquewhite;
+  background-color: var(--page-bg);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -28,7 +35,7 @@ body {
   height: 70vw;
   max-width: 300px;
   max-height: 300px;
-  background-color: brown;
+  background-color: var(--primary-color);
   border-radius: 50%;
   margin: 1rem auto;
   transition: transform 0.5s ease;
@@ -38,7 +45,7 @@ body {
 .home,
 .contact {
   height: 50%;
-  color: antiquewhite;
+  color: var(--text-color);
   font-size: 2rem;
   display: flex;
   justify-content: center;
@@ -52,9 +59,9 @@ body {
 
 .btn {
   font-size: 1.5rem;
-  background-color: brown;
+  background-color: var(--primary-color);
   cursor: pointer;
-  color: antiquewhite;
+  color: var(--text-color);
   padding: 1rem 2.5rem; /* Wider buttons with increased horizontal padding */
   border: none;
   margin: 0 0.5rem;
